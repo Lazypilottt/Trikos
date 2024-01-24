@@ -124,10 +124,10 @@ void loop() {
     server.handleClient();
     
       command = server.arg("State");
-      if (command == "F") Ahead();
-      else if (command == "B") Back();
-      else if (command == "L") Left();
-      else if (command == "R") Right();
+      if (command == "W") Ahead();
+      else if (command == "A") Back();
+      else if (command == "S") Left();
+      else if (command == "D") Right();
       else if (command == "0") speedCar = 400;
       else if (command == "1") speedCar = 470;
       else if (command == "2") speedCar = 540;
@@ -138,9 +138,9 @@ void loop() {
       else if (command == "7") speedCar = 890;
       else if (command == "8") speedCar = 960;
       else if (command == "9") speedCar = 1023;
-      else if (command == "S") stopRobot();
+      else if (command == "O") stopRobot();
       else if (command == "U") rampup();
-      else if (command == "D") rampdown();
+      else if (command == "L") rampdown();
 }
 
 void HTTP_handleRoot(void) {
